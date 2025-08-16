@@ -3,6 +3,7 @@
 ## Índice
 * [Clase 01 - Curso Avanzado de Webpack para Producción Web](#id1)
 * [Clase 02 - Conceptos básicos de Webpack](#id2)
+* [Clase 03 - Tu primer build con Webpack](#id3)
 
 ---
 
@@ -52,5 +53,74 @@ Las opciones avanzadas de configuración en Webpack permiten:
 * **Minificación y optimización**: Para reducir el tamaño de los archivos finales y mejorar la carga de la aplicación.
 
 * **Entornos de desarrollo locales**: Crear un servidor local que permite ver los cambios en tiempo real en el navegador. Esta funcionalidad es crítica para un flujo de desarrollo ágil.
+
+---
+
+## Tu primer build con Webpack [3/28]<a name="id3"></a>
+
+### ¿Cómo iniciar un nuevo proyecto?
+1. Crear y organizar la carpeta del proyecto:
+    * Utilizar el comando ```mkdir``` para crear una nueva carpeta, por ejemplo, ```Curso Webpack```.
+    * Navega dentro de esta carpeta para iniciar la configuración.
+
+2. Inicializar Git y NPM:
+    * Ejecutar ```git init``` para crear un repositorio local. Esto es esencial para manejar el control de versiones.
+    * Usar ```npm init -y``` para generar el archivo ```package.json``` de manera rápida y automática. Este archivo es crucial para gestionar las dependencias del proyecto.
+
+3. Configurar el espacio de trabajo:
+    * Abrir la carpeta en un editor de código, como Visual Studio Code.
+    * Crea una estructura de carpetas, se sugiere usar una carpeta ```src``` para almacenar el código fuente.
+
+### Implementar un código básico en JavaScript
+En la carpeta ```src```, crear un archivo ```index.js``` donde se colocara la lógica inicial. Por ejemplo:
+```javascript
+const hello = "hello world";
+console.log(hello);
+```
+Este código es un punto de partida para ver cómo Webpack optimiza tu estructura.
+
+### ¿Cómo instalar y usar Webpack?
+
+1. Instalación de Webpack:
+	* Utiliza el siguiente comando en la terminal para instalar Webpack y su CLI:
+```
+npm install webpack webpack-cli -D
+```
+Esto debe ser instalado como **dependencia de desarrollo**.
+
+2. Ejecución de Webpack:
+    * Una vez instalado, escribir el siguiente comando para ejecutar de manera local:
+```
+npx webpack
+```
+Este comando generará una carpeta ```dist``` con un archivo ```main.js``` optimizado.
+
+### ¿Qué diferencias hay entre los modos development y production?
+1. **Modo Development**: proporciona una versión del código optimizada para depuración, incluyendo mapas de origen que facilitan el debugging. Se ejecuta con el comando:
+```
+npx webpack --mode development
+```
+
+2. **Modo Production**: minifica y optimiza el código para ser lo más eficiente posible, eliminando redundancias innecesarias. Se ejecuta con el comando:
+```
+npx webpack --mode production
+```
+
+### ¿Cómo estructurar un proyecto con múltiples archivos?
+
+1. Crear archivos de utilidad: Dentro de ```src```, crear una carpeta ```utils``` y agregar un archivo ```sum.js``` con el siguiente contenido:
+```javascript
+const sum = (a, b) => a + b;
+export default sum;
+```
+
+2. Importar y usar módulos en ```index.js```: Importa la función sum en el archivo principal:
+```javascript
+import sum from './utils/sum';
+
+console.log(sum(2, 2));
+```
+
+Al ejecutar Webpack, tanto en development como en production, se puede notar que el código resultante es optimizado de diferentes formas dependiendo del modo.
 
 ---
