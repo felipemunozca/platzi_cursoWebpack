@@ -4,6 +4,7 @@
 * [Clase 01 - Curso Avanzado de Webpack para Producción Web](#id1)
 * [Clase 02 - Conceptos básicos de Webpack](#id2)
 * [Clase 03 - Tu primer build con Webpack](#id3)
+* [Clase 04 - Optimización de Proyectos Web con Webpack para Producción](#id4)
 
 ---
 
@@ -124,3 +125,46 @@ console.log(sum(2, 2));
 Al ejecutar Webpack, tanto en development como en production, se puede notar que el código resultante es optimizado de diferentes formas dependiendo del modo.
 
 ---
+
+## Optimización de Proyectos Web con Webpack para Producción [4/28]<a name="id4"></a>
+La optimización de un proyecto web es fundamental para garantizar que se ejecute de manera eficiente en producción. Para aprender cómo transformar un proyecto básico de HTML, CSS y JavaScript en uno listo para producción utilizando Webpack, aquí tienes una guía paso a paso.
+
+### ¿Qué proyecto vamos a crear?
+Para entender el poder de Webpack, se trabajara con un proyecto de portafolio simple, el cual mostrará:
++ Foto de perfil.
++ Nombre y correo electrónico.
++ Ubicación y redes sociales.
+
+Cada vez que se refresque la página, se generará un nuevo usuario gracias a una API aleatoria, añadiendo lógica al proyecto.
+
+### ¿Cómo clonar el proyecto?
+El primer paso es obtener el repositorio del proyecto. Utilizar la terminal de tu entorno de desarrollo preferido para clonar el proyecto, escribiendo el comando:
+```
+git clone [URL_del_repositorio]
+```
+
+### ¿Qué organizar para iniciar con Webpack?
+Un aspecto fundamental al trabajar con Webpack es la organización de archivos. La estructura básica debería incluir:
++ Carpeta public: Contiene archivos estáticos esenciales.
++ Carpeta source: Aquí reside el código fuente del proyecto.
++ Archivos clave como .gitignore, el package.json y la licencia.
+
+Dentro de la carpeta source, se encuentra:
++ HTML, CSS y JavaScript Vanilla: Sin frameworks ni librerías.
++ Fonts y recursos estáticos: Incluyendo imágenes de redes sociales.
++ Sistema de templates y lógica de API: Utilizado para la generación dinámica del contenido utilizando Random User API.
+
+### ¿Cómo integrar y configurar Webpack en el proyecto?
+El siguiente paso después de entender la estructura es integrar Webpack. Se procede con la instalación en el terminal:
+```
+npm install webpack webpack-cli -D
+```
+Esto añade Webpack y sus componentes de línea de comandos como dependencias de desarrollo.
+Para asegurar que las configuraciones de Webpack funcionen sin problemas, ejecuta el siguiente comando para ver cómo se comporta en modo producción:
+```
+npx webpack --mode production
+```
+En este estado, Webpack usará sus configuraciones predeterminadas para minificar y preparar el proyecto para producción.
+
+### ¿Por qué crear un archivo de configuración personalizado?
+El archivo de configuración de Webpack es crucial porque define cómo se manejan las entradas y salidas del proyecto, así como otras configuraciones esenciales.
