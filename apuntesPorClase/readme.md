@@ -5,6 +5,9 @@
 * [Clase 02 - Conceptos básicos de Webpack](#id2)
 * [Clase 03 - Tu primer build con Webpack](#id3)
 * [Clase 04 - Optimización de Proyectos Web con Webpack para Producción](#id4)
+* [Clase 05 - Configuración básica de Webpack para proyectos JavaScript](#id5)
+//
+
 
 ---
 
@@ -168,3 +171,45 @@ En este estado, Webpack usará sus configuraciones predeterminadas para minifica
 
 ### ¿Por qué crear un archivo de configuración personalizado?
 El archivo de configuración de Webpack es crucial porque define cómo se manejan las entradas y salidas del proyecto, así como otras configuraciones esenciales.
+
+---
+
+## Configuración básica de Webpack para proyectos JavaScript [5/28]<a name="id5"></a>
+En esta clase exploraremos la configuración básica de webpack, una herramienta esencial para crear aplicaciones web eficientes y modulares.
+
+### ¿Cómo crear el archivo de configuración de webpack?
+Se comienza creando un nuevo archivo de configuración. En la raíz del proyecto, crear un nuevo archivo y debe llamarse **webpack.config.js**. 
+Este archivo se convertirá en el recurso principal para definir la configuración que el proyecto necesita.
+```javascript
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js'
+  },
+  resolve: {
+    extensions: ['.js']
+  }
+};
+```
+### ¿Qué elementos se deben configurar inicialmente?
++ **Entrada (entry)**: Se refiere al punto de inicio de la aplicación. Generalmente, es el archivo index.js en el directorio *src* (por eso se utilizan estos nombres y rutas, para crear un estándar).
+
++ **Salida (output)**: Determina el destino o ruta de la compilación final. Webpack genera los archivos en una carpeta llamada **dist**, abreviatura de **distribution**. Se Puede dar nombres específicos a los archivos compilados, como main.js o bundle.js.
+
++ **Resolución (resolve)**: Aquí se definen las extensiones de archivos que webpack debe manejar. Comúnmente, se incluyen extensiones como .js, y si se utilizan frameworks como Svelte o React, configuraciones adicionales podrían ser necesarias.
+
+### ¿Cómo ejecutar webpack con la configuración establecida?
+Una vez configurado, se verifica que no existan errores de escritura (typos) en el archivo webpack.config.js y ejecuta el siguiente comando en la terminal para compilar el proyecto:
+`npx webpack --mode production --config webpack.config.js`
+
+Como alternativa, se puede simplificar la ejecución creando un script dentro del archivo package.json:
+```
+"scripts": {
+  "build": "webpack --mode production"
+}
+```
+
+Así, se podrá ejecutar webpack con el comando **npm run build**, omitiendo la necesidad de especificar el archivo de configuración siempre que esté en la raíz del proyecto.
