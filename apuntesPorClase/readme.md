@@ -6,8 +6,6 @@
 * [Clase 03 - Tu primer build con Webpack](#id3)
 * [Clase 04 - Optimización de Proyectos Web con Webpack para Producción](#id4)
 * [Clase 05 - Configuración básica de Webpack para proyectos JavaScript](#id5)
-//
-
 
 ---
 
@@ -213,3 +211,5 @@ Como alternativa, se puede simplificar la ejecución creando un script dentro de
 ```
 
 Así, se podrá ejecutar webpack con el comando **npm run build**, omitiendo la necesidad de especificar el archivo de configuración siempre que esté en la raíz del proyecto.
+
+---
