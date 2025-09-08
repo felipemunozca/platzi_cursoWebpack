@@ -8,5 +8,16 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js']
+    },
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/, // Expresión regular para Archivos .mjs o .js
+                exclude: /node_modules/, 
+                use: {
+                    loader: 'babel-loader'
+                }
+            }
+        ]
     }
 }

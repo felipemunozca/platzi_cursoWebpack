@@ -6,6 +6,7 @@
 * [Clase 03 - Tu primer build con Webpack](#id3)
 * [Clase 04 - Optimización de Proyectos Web con Webpack para Producción](#id4)
 * [Clase 05 - Configuración básica de Webpack para proyectos JavaScript](#id5)
+* [Clase 06 - Integración de Babel y Webpack para compatibilidad JavaScript](#id6)
 
 ---
 
@@ -201,6 +202,7 @@ module.exports = {
 
 ### ¿Cómo ejecutar webpack con la configuración establecida?
 Una vez configurado, se verifica que no existan errores de escritura (typos) en el archivo webpack.config.js y ejecuta el siguiente comando en la terminal para compilar el proyecto:
+
 `npx webpack --mode production --config webpack.config.js`
 
 Como alternativa, se puede simplificar la ejecución creando un script dentro del archivo package.json:
@@ -213,3 +215,71 @@ Como alternativa, se puede simplificar la ejecución creando un script dentro de
 Así, se podrá ejecutar webpack con el comando **npm run build**, omitiendo la necesidad de especificar el archivo de configuración siempre que esté en la raíz del proyecto.
 
 ---
+
+## Integración de Babel y Webpack para compatibilidad JavaScript [6/28]<a name="id6"></a>
+Mejorar la compatibilidad de tu código JavaScript con todos los navegadores puede ser una tarea compleja. Sin embargo, Babel es una herramienta que puede simplificar este proceso. 
+Babel se utiliza para transformar el código JavaScript en una versión más compatible con los entornos actuales, asegurando que funcione correctamente en **cualquier navegador**.
+
+### ¿Cuáles son las dependencias necesarias para Babel?
+Para comenzar a utilizar Babel, es esencial instalar ciertas dependencias que prepararán el código JavaScript. Aquí hay una lista de comandos para instalar estas dependencias a través de npm:
+
+#### Instalar dependencias de Babel
+Escribir en la consola el siguiente comando:
+
+`npm install @babel/core @babel/preset-env @babel/plugin-transform-runtime babel-loader -D`
+
+**IMPORTANTE:** hacer la instalación como dependencia de desarrollo.
+
++ **@babel/core**: El núcleo de Babel.
++ **@babel/preset-env**: Ayuda a trabajar con JavaScript moderno.
++ **@babel/plugin-transform-runtime**: Facilita el manejo de asincronismos.
++ **babel-loader**: Permite a Webpack procesar archivos JavaScript a través de Babel.
+
+### ¿Cómo configurar Babel en el proyecto?
+Una vez instaladas las dependencias, se debe crear un archivo de configuración para Babel, comúnmente conocido como **.babelrc**. Este archivo desde estar en la raíz del proyecto y describe cómo Babel debe transformar el código JavaScript.
+````javascript
+// Archivo .babelrc
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-transform-runtime"]
+}
+````
+
+En este archivo, se especifican los *presets* y *plugins* mencionados previamente. 
+El uso de un punto al inicio del nombre del archivo lo hace oculto en sistemas operativos Unix, así que podría no ser visible a simple vista.
+
+### ¿Cómo integrar Babel con Webpack?
+Ahora que Babel está preparado, debemos asegurarnos de que Webpack pueda utilizarlo para procesar el código en JavaScript. Se necesita modificar la configuración de Webpack para que incluya el nuevo módulo Babel.
+````javascript
+// Configuración de webpack.config.js
+module.exports = {
+  // ... otras configuraciones
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/, // Archivos .mjs o .js
+        exclude: /node_modules/, 
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
+}
+````
+
++ **test**: Define que Webpack debe utilizar Babel para archivos con extensiones .js o .mjs.
++ **exclude**: Evita que los módulos dentro de la carpeta node_modules sean procesados por Babel.
++ **use**: Especifica que babel-loader se utilizará para el proceso de transformación.
+
+### ¿Cómo verificar que la configuración funciona?
+Tras configurar Babel y Webpack, es crucial verificar que todo funcione correctamente. Para realizar la prueba, se compilando el proyecto con el siguiente comando:
+
+`npm run build`
+
+Esto ejecuta el proceso de build en modo producción. Verificar el archivo de salida compilado para confirmar que el código JavaScript ha sido transformado correctamente, asegurando la compatibilidad con cualquier navegador.
+
+### ¿Por qué es importante esta configuración?
+La configuración adecuada de Babel y Webpack permite que el JavaScript moderno, que quizás no sea compatible directamente con ciertos navegadores, sea transformado a un formato que sí lo es. Esto logra que tu aplicación funcione sin problemas en una amplia variedad de dispositivos y versiones de navegadores, garantizando una experiencia de usuario más consistente.
+
+--- 
