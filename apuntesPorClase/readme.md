@@ -282,4 +282,7 @@ Esto ejecuta el proceso de build en modo producción. Verificar el archivo de sa
 ### ¿Por qué es importante esta configuración?
 La configuración adecuada de Babel y Webpack permite que el JavaScript moderno, que quizás no sea compatible directamente con ciertos navegadores, sea transformado a un formato que sí lo es. Esto logra que tu aplicación funcione sin problemas en una amplia variedad de dispositivos y versiones de navegadores, garantizando una experiencia de usuario más consistente.
 
+> [!IMPORTANT]
+> Si se esta tomando el curso después de Julio 2025 probablemente aparezca un error al compilar indicando que no puede encontrar unos Módulos. Para resolverlo, se necesita agregar la dependencia **npm install @babel/runtime**, y muy IMPORTANTE, no se debe agregar como dependencia de desarrollo, sino que tiene que ser en producción.
+
 --- 
