@@ -11,7 +11,16 @@
 
 <body>
     <div id="main"></div>
-    <script type="module" src="../src//index.js"></script>
+    <!--
+        N_7.3: Ya que se crearon las configuraciones para que el archivo template de html funcione con un plugin, ya no es necesario 
+            cargar el código javascript de forma directa, por lo que se puede quitar la siguiente linea del index.
+
+        <script type="module" src="../src//index.js"></script>
+
+        N_7.4: Luego de realizar estos cambios, desde la terminal, ejecutar el comando:
+        npm run build
+        Dentro de la carpeta "dist" se actualiza el código de los archivos index.html y main.js
+    -->
 </body>
 
 </html>

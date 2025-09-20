@@ -7,6 +7,7 @@
 * [Clase 04 - Optimización de Proyectos Web con Webpack para Producción](#id4)
 * [Clase 05 - Configuración básica de Webpack para proyectos JavaScript](#id5)
 * [Clase 06 - Integración de Babel y Webpack para compatibilidad JavaScript](#id6)
+* [Clase 07 - Configuración de HTML-webpack-plugin en Webpack](#id7)
 
 ---
 
@@ -283,6 +284,66 @@ Esto ejecuta el proceso de build en modo producción. Verificar el archivo de sa
 La configuración adecuada de Babel y Webpack permite que el JavaScript moderno, que quizás no sea compatible directamente con ciertos navegadores, sea transformado a un formato que sí lo es. Esto logra que tu aplicación funcione sin problemas en una amplia variedad de dispositivos y versiones de navegadores, garantizando una experiencia de usuario más consistente.
 
 > [!IMPORTANT]
-> Si se esta tomando el curso después de Julio 2025 probablemente aparezca un error al compilar indicando que no puede encontrar unos Módulos. Para resolverlo, se necesita agregar la dependencia **npm install @babel/runtime**, y muy IMPORTANTE, no se debe agregar como dependencia de desarrollo, sino que tiene que ser en producción.
+> Si se esta tomando el curso después de Julio de 2025 probablemente aparezca un error al compilar indicando que no puede encontrar unos Módulos. Para resolverlo, se necesita agregar la dependencia **"npm install @babel/runtime"**, y muy IMPORTANTE, no se debe agregar como dependencia de desarrollo, sino que tiene que ser en producción.
 
 --- 
+
+## Configuración de HTML-webpack-plugin en Webpack [7/28]<a name="id7"></a>
+Para crear proyectos eficientes y bien optimizados, es esencial aprender a integrar HTML con Webpack. Este proceso permite preparar y gestionar adecuadamente nuestros los HTML para producción.
+
+### Instalación del plugin:
+1. Instalar HTML-webpack-plugin: Este plugin es fundamental para la configuración de Webpack, ya que mejora el manejo de archivos HTML del proyecto.
+````
+npm install html-webpack-plugin --save-dev
+````
+
+2. Configuración en el archivo webpack.config.js: modificar este archivo para incluir el plugin que se acaba de instalar.
+
+````javascript
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  // otras configuraciones
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './public/index.html',
+      filename: 'index.html',
+    }),
+  ],
+};
+````
+
+### Cambios en el archivo index.html:
+
+Eliminar referencias directas a scripts que serán gestionados por Webpack:
+````html
+<!-- Antes -->
+<script src="main.js"></script>
+
+<!-- Después -->
+<!-- Nada, Webpack se encargará de esto -->
+````
+
+### ¿Cómo se compila y prueba el proyecto?
+Con la configuración completa, ahora compilar y probar el proyecto es sencillo. Podemos hacerlo tanto para entornos de desarrollo como de producción usando diferentes comandos de npm.
+
+#### Compilar para producción:
+Este comando genera la versión optimizada para producción, incluyendo la minificación de archivos.
+````
+npm run build
+````
+
+#### Compilar para desarrollo:
+Este comando nos ayuda a obtener una versión más legible del código, ideal para depuración.
+````
+npm run dev
+````
+
+### ¿Qué observar después de la compilación?
+Una vez realizados los pasos anteriores y ejecutados los comandos, se debe revisar:
+* El archivo index.html está incluido con scripts automáticamente inyectados.
+* La versión de producción está minificada.
+* La versión de desarrollo mantiene un formato más legible para facilitar la depuración.
+
+---
