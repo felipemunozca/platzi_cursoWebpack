@@ -8,6 +8,7 @@
 * [Clase 05 - Configuración básica de Webpack para proyectos JavaScript](#id5)
 * [Clase 06 - Integración de Babel y Webpack para compatibilidad JavaScript](#id6)
 * [Clase 07 - Configuración de HTML-webpack-plugin en Webpack](#id7)
+* [Clase 08 - Configuración de Webpack para CSS y Preprocesadores](#id8)
 
 ---
 
@@ -345,5 +346,66 @@ Una vez realizados los pasos anteriores y ejecutados los comandos, se debe revis
 * El archivo index.html está incluido con scripts automáticamente inyectados.
 * La versión de producción está minificada.
 * La versión de desarrollo mantiene un formato más legible para facilitar la depuración.
+
+---
+
+## Configuración de Webpack para CSS y Preprocesadores [8/28]<a name="id8"></a>
+El uso adecuado de CSS y preprocesadores en proyectos web es fundamental para un desarrollo eficiente y estilizado.
+
+### Instalar las dependencias necesarias
+Se deben instalar algunas dependencias esenciales, CSSLoader y MiniCssExtractPlugin:
+
+1. Abrir la terminal y ejecutar el siguiente comando para instalar como dependencias de desarrollo:
+````
+npm install mini-css-extract-plugin css-loader -D
+````
+
+2. Estas dependencias permitirán procesar y combinar CSS para toda la aplicación.
+
+### ¿Cómo modificar la estructura del proyecto?
+Después de instalar las dependencias, se deben seguir los siguientes pasos:
+
+* Eliminar la referencia CSS de la plantilla HTML.
+* Abrir el archivo index.js en la carpeta source.
+* Importar los estilos directamente desde tu archivo main.css con:
+````javascript
+import './styles/main.css';
+````
+
+### ¿Cómo configurar Webpack para procesos CSS?
+Se debe modificar el archivo de configuración de Webpack de la siguiente manera:
+
+1. Se debe requerir el plugin dentro del archivo de configuración:
+````javascript
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+````
+
+2. Configurar una nueva regla para CSS en la sección de module.rules:
+````javascript
+module: {
+    rules: [
+        // Otras reglas...
+        {
+            test: /\.css$/i,
+            use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        },
+    ],
+}
+````
+
+3. Añadir el plugin a la sección de plugins:
+````javascript
+plugins: [
+    new MiniCssExtractPlugin(),
+    // Otros plugins...
+],
+````
+
+### ¿Cómo probar la configuración?
+Una vez que las configuraciones funcionan adecuadamente. Se ejecuta el proyecto en modo de desarrollo con el comando:
+````
+npm run dev
+````
+Esto debería compilar los archivos CSS, generando archivos como main.js y main.css, ubicados en tu carpeta **dist**.
 
 ---

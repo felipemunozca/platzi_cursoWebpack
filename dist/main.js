@@ -1,2 +1,263 @@
-/*! For license information please see main.js.LICENSE.txt */
-(()=>{var t={172:t=>{t.exports=function(t,e){this.v=t,this.k=e},t.exports.__esModule=!0,t.exports.default=t.exports},373:t=>{t.exports=function(t){var e=Object(t),r=[];for(var n in e)r.unshift(n);return function t(){for(;r.length;)if((n=r.pop())in e)return t.value=n,t.done=!1,t;return t.done=!0,t}},t.exports.__esModule=!0,t.exports.default=t.exports},546:t=>{function e(r,n,o,u){var a=Object.defineProperty;try{a({},"",{})}catch(r){a=0}t.exports=e=function(t,r,n,o){function u(r,n){e(t,r,function(t){return this._invoke(r,n,t)})}r?a?a(t,r,{value:n,enumerable:!o,configurable:!o,writable:!o}):t[r]=n:(u("next",0),u("throw",1),u("return",2))},t.exports.__esModule=!0,t.exports.default=t.exports,e(r,n,o,u)}t.exports=e,t.exports.__esModule=!0,t.exports.default=t.exports},579:(t,e,r)=>{var n=r(738).default;t.exports=function(t){if(null!=t){var e=t["function"==typeof Symbol&&Symbol.iterator||"@@iterator"],r=0;if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length))return{next:function(){return t&&r>=t.length&&(t=void 0),{value:t&&t[r++],done:!t}}}}throw new TypeError(n(t)+" is not iterable")},t.exports.__esModule=!0,t.exports.default=t.exports},633:(t,e,r)=>{var n=r(172),o=r(993),u=r(869),a=r(887),s=r(791),c=r(373),i=r(579);function p(){"use strict";var e=o(),r=e.m(p),f=(Object.getPrototypeOf?Object.getPrototypeOf(r):r.__proto__).constructor;function l(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===f||"GeneratorFunction"===(e.displayName||e.name))}var v={throw:1,return:2,break:3,continue:3};function d(t){var e,r;return function(n){e||(e={stop:function(){return r(n.a,2)},catch:function(){return n.v},abrupt:function(t,e){return r(n.a,v[t],e)},delegateYield:function(t,o,u){return e.resultName=o,r(n.d,i(t),u)},finish:function(t){return r(n.f,t)}},r=function(t,r,o){n.p=e.prev,n.n=e.next;try{return t(r,o)}finally{e.next=n.n}}),e.resultName&&(e[e.resultName]=n.v,e.resultName=void 0),e.sent=n.v,e.next=n.n;try{return t.call(this,e)}finally{n.p=e.prev,n.n=e.next}}}return(t.exports=p=function(){return{wrap:function(t,r,n,o){return e.w(d(t),r,n,o&&o.reverse())},isGeneratorFunction:l,mark:e.m,awrap:function(t,e){return new n(t,e)},AsyncIterator:s,async:function(t,e,r,n,o){return(l(e)?a:u)(d(t),e,r,n,o)},keys:c,values:i}},t.exports.__esModule=!0,t.exports.default=t.exports)()}t.exports=p,t.exports.__esModule=!0,t.exports.default=t.exports},738:t=>{function e(r){return t.exports=e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},t.exports.__esModule=!0,t.exports.default=t.exports,e(r)}t.exports=e,t.exports.__esModule=!0,t.exports.default=t.exports},756:(t,e,r)=>{var n=r(633)();t.exports=n;try{regeneratorRuntime=n}catch(t){"object"==typeof globalThis?globalThis.regeneratorRuntime=n:Function("r","regeneratorRuntime = r")(n)}},791:(t,e,r)=>{var n=r(172),o=r(546);t.exports=function t(e,r){function u(t,o,a,s){try{var c=e[t](o),i=c.value;return i instanceof n?r.resolve(i.v).then(function(t){u("next",t,a,s)},function(t){u("throw",t,a,s)}):r.resolve(i).then(function(t){c.value=t,a(c)},function(t){return u("throw",t,a,s)})}catch(t){s(t)}}var a;this.next||(o(t.prototype),o(t.prototype,"function"==typeof Symbol&&Symbol.asyncIterator||"@asyncIterator",function(){return this})),o(this,"_invoke",function(t,e,n){function o(){return new r(function(e,r){u(t,n,e,r)})}return a=a?a.then(o,o):o()},!0)},t.exports.__esModule=!0,t.exports.default=t.exports},869:(t,e,r)=>{var n=r(887);t.exports=function(t,e,r,o,u){var a=n(t,e,r,o,u);return a.next().then(function(t){return t.done?t.value:a.next()})},t.exports.__esModule=!0,t.exports.default=t.exports},887:(t,e,r)=>{var n=r(993),o=r(791);t.exports=function(t,e,r,u,a){return new o(n().w(t,e,r,u),a||Promise)},t.exports.__esModule=!0,t.exports.default=t.exports},993:(t,e,r)=>{var n=r(546);function o(){var e,r,u="function"==typeof Symbol?Symbol:{},a=u.iterator||"@@iterator",s=u.toStringTag||"@@toStringTag";function c(t,o,u,a){var s=o&&o.prototype instanceof p?o:p,c=Object.create(s.prototype);return n(c,"_invoke",function(t,n,o){var u,a,s,c=0,p=o||[],f=!1,l={p:0,n:0,v:e,a:v,f:v.bind(e,4),d:function(t,r){return u=t,a=0,s=e,l.n=r,i}};function v(t,n){for(a=t,s=n,r=0;!f&&c&&!o&&r<p.length;r++){var o,u=p[r],v=l.p,d=u[2];t>3?(o=d===n)&&(s=u[(a=u[4])?5:(a=3,3)],u[4]=u[5]=e):u[0]<=v&&((o=t<2&&v<u[1])?(a=0,l.v=n,l.n=u[1]):v<d&&(o=t<3||u[0]>n||n>d)&&(u[4]=t,u[5]=n,l.n=d,a=0))}if(o||t>1)return i;throw f=!0,n}return function(o,p,d){if(c>1)throw TypeError("Generator is already running");for(f&&1===p&&v(p,d),a=p,s=d;(r=a<2?e:s)||!f;){u||(a?a<3?(a>1&&(l.n=-1),v(a,s)):l.n=s:l.v=s);try{if(c=2,u){if(a||(o="next"),r=u[o]){if(!(r=r.call(u,s)))throw TypeError("iterator result is not an object");if(!r.done)return r;s=r.value,a<2&&(a=0)}else 1===a&&(r=u.return)&&r.call(u),a<2&&(s=TypeError("The iterator does not provide a '"+o+"' method"),a=1);u=e}else if((r=(f=l.n<0)?s:t.call(n,l))!==i)break}catch(t){u=e,a=1,s=t}finally{c=1}}return{value:r,done:f}}}(t,u,a),!0),c}var i={};function p(){}function f(){}function l(){}r=Object.getPrototypeOf;var v=[][a]?r(r([][a]())):(n(r={},a,function(){return this}),r),d=l.prototype=p.prototype=Object.create(v);function x(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,l):(t.__proto__=l,n(t,s,"GeneratorFunction")),t.prototype=Object.create(d),t}return f.prototype=l,n(d,"constructor",l),n(l,"constructor",f),f.displayName="GeneratorFunction",n(l,s,"GeneratorFunction"),n(d),n(d,s,"Generator"),n(d,a,function(){return this}),n(d,"toString",function(){return"[object Generator]"}),(t.exports=o=function(){return{w:c,m:x}},t.exports.__esModule=!0,t.exports.default=t.exports)()}t.exports=o,t.exports.__esModule=!0,t.exports.default=t.exports}},e={};function r(n){var o=e[n];if(void 0!==o)return o.exports;var u=e[n]={exports:{}};return t[n](u,u.exports,r),u.exports}r.n=t=>{var e=t&&t.__esModule?()=>t.default:()=>t;return r.d(e,{a:e}),e},r.d=(t,e)=>{for(var n in e)r.o(e,n)&&!r.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:e[n]})},r.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),(()=>{"use strict";function t(t,e,r,n,o,u,a){try{var s=t[u](a),c=s.value}catch(t){return void r(t)}s.done?e(c):Promise.resolve(c).then(n,o)}function e(e){return function(){var r=this,n=arguments;return new Promise(function(o,u){var a=e.apply(r,n);function s(e){t(a,o,u,s,c,"next",e)}function c(e){t(a,o,u,s,c,"throw",e)}s(void 0)})}}var n=r(756),o=r.n(n),u="https://randomuser.me/api/";const a=function(){var t=e(o().mark(function t(e){var r,n,a,s;return o().wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return r=e?"".concat(u).concat(e):u,t.prev=1,t.next=2,fetch(r);case 2:return n=t.sent,t.next=3,n.json();case 3:return a=t.sent,t.abrupt("return",a.results[0]);case 4:t.prev=4,s=t.catch(1),console.log("Fetch Error",s);case 5:case"end":return t.stop()}},t,null,[[1,4]])}));return function(e){return t.apply(this,arguments)}}(),s=function(){var t=e(o().mark(function t(){var e,r;return o().wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=1,a();case 1:return e=t.sent,r='\n    <div class="About">\n      <div class="card">\n        <div class="card_details">\n          <div class="card_photo center circle">\n            <img src="'.concat(e.picture.large,'" alt="').concat(e.name.first,'">\n            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="enable-background:new -580 439 577.9 194;"\n              xml:space="preserve">\n              <circle cx="50" cy="50" r="40" />\n            </svg>\n          </div>\n          <p class="card_title">Hi, My name is</p>\n          <p class="card_value">').concat(e.name.first," ").concat(e.name.last,'</p>\n        </div>\n        <div class="card_userdata">\n          <ul>\n            <li>').concat(e.email,"</li>\n            <li>").concat(e.location.country,'</li>\n          </ul>\n        </div>\n        <div class="card_social">\n          <a href="https://twitter.com/gndx">\n            <img src="../src/assets/images/twitter.png" />\n          </a>\n          <a href="https://github.com/gndx">\n            <img src="../src/assets/images/github.png" />\n          </a>\n          <a href="https://instagram.com/gndx">\n            <img src="../src/assets/images/instagram.png" />\n          </a>\n        </div>\n      </div>\n    </div>\n  '),t.abrupt("return",r);case 2:case"end":return t.stop()}},t)}));return function(){return t.apply(this,arguments)}}();var c;console.log("hola"),(c=e(o().mark(function t(){var e;return o().wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return e=document.getElementById("main"),t.next=1,s();case 1:e.innerHTML=t.sent;case 2:case"end":return t.stop()}},t)})),function(){return c.apply(this,arguments)})()})()})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/@babel/runtime/helpers/OverloadYield.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/OverloadYield.js ***!
+  \**************************************************************/
+/***/ ((module) => {
+
+eval("{function _OverloadYield(e, d) {\n  this.v = e, this.k = d;\n}\nmodule.exports = _OverloadYield, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/OverloadYield.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _asyncToGenerator)\n/* harmony export */ });\nfunction asyncGeneratorStep(n, t, e, r, o, a, c) {\n  try {\n    var i = n[a](c),\n      u = i.value;\n  } catch (n) {\n    return void e(n);\n  }\n  i.done ? t(u) : Promise.resolve(u).then(r, o);\n}\nfunction _asyncToGenerator(n) {\n  return function () {\n    var t = this,\n      e = arguments;\n    return new Promise(function (r, o) {\n      var a = n.apply(t, e);\n      function _next(n) {\n        asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n);\n      }\n      function _throw(n) {\n        asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n);\n      }\n      _next(void 0);\n    });\n  };\n}\n\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/regenerator.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regenerator.js ***!
+  \************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{var regeneratorDefine = __webpack_require__(/*! ./regeneratorDefine.js */ \"./node_modules/@babel/runtime/helpers/regeneratorDefine.js\");\nfunction _regenerator() {\n  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */\n  var e,\n    t,\n    r = \"function\" == typeof Symbol ? Symbol : {},\n    n = r.iterator || \"@@iterator\",\n    o = r.toStringTag || \"@@toStringTag\";\n  function i(r, n, o, i) {\n    var c = n && n.prototype instanceof Generator ? n : Generator,\n      u = Object.create(c.prototype);\n    return regeneratorDefine(u, \"_invoke\", function (r, n, o) {\n      var i,\n        c,\n        u,\n        f = 0,\n        p = o || [],\n        y = !1,\n        G = {\n          p: 0,\n          n: 0,\n          v: e,\n          a: d,\n          f: d.bind(e, 4),\n          d: function d(t, r) {\n            return i = t, c = 0, u = e, G.n = r, a;\n          }\n        };\n      function d(r, n) {\n        for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) {\n          var o,\n            i = p[t],\n            d = G.p,\n            l = i[2];\n          r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0));\n        }\n        if (o || r > 1) return a;\n        throw y = !0, n;\n      }\n      return function (o, p, l) {\n        if (f > 1) throw TypeError(\"Generator is already running\");\n        for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) {\n          i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u);\n          try {\n            if (f = 2, i) {\n              if (c || (o = \"next\"), t = i[o]) {\n                if (!(t = t.call(i, u))) throw TypeError(\"iterator result is not an object\");\n                if (!t.done) return t;\n                u = t.value, c < 2 && (c = 0);\n              } else 1 === c && (t = i[\"return\"]) && t.call(i), c < 2 && (u = TypeError(\"The iterator does not provide a '\" + o + \"' method\"), c = 1);\n              i = e;\n            } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break;\n          } catch (t) {\n            i = e, c = 1, u = t;\n          } finally {\n            f = 1;\n          }\n        }\n        return {\n          value: t,\n          done: y\n        };\n      };\n    }(r, o, i), !0), u;\n  }\n  var a = {};\n  function Generator() {}\n  function GeneratorFunction() {}\n  function GeneratorFunctionPrototype() {}\n  t = Object.getPrototypeOf;\n  var c = [][n] ? t(t([][n]())) : (regeneratorDefine(t = {}, n, function () {\n      return this;\n    }), t),\n    u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c);\n  function f(e) {\n    return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, regeneratorDefine(e, o, \"GeneratorFunction\")), e.prototype = Object.create(u), e;\n  }\n  return GeneratorFunction.prototype = GeneratorFunctionPrototype, regeneratorDefine(u, \"constructor\", GeneratorFunctionPrototype), regeneratorDefine(GeneratorFunctionPrototype, \"constructor\", GeneratorFunction), GeneratorFunction.displayName = \"GeneratorFunction\", regeneratorDefine(GeneratorFunctionPrototype, o, \"GeneratorFunction\"), regeneratorDefine(u), regeneratorDefine(u, o, \"Generator\"), regeneratorDefine(u, n, function () {\n    return this;\n  }), regeneratorDefine(u, \"toString\", function () {\n    return \"[object Generator]\";\n  }), (module.exports = _regenerator = function _regenerator() {\n    return {\n      w: i,\n      m: f\n    };\n  }, module.exports.__esModule = true, module.exports[\"default\"] = module.exports)();\n}\nmodule.exports = _regenerator, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/regenerator.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorAsync.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorAsync.js ***!
+  \*****************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{var regeneratorAsyncGen = __webpack_require__(/*! ./regeneratorAsyncGen.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js\");\nfunction _regeneratorAsync(n, e, r, t, o) {\n  var a = regeneratorAsyncGen(n, e, r, t, o);\n  return a.next().then(function (n) {\n    return n.done ? n.value : a.next();\n  });\n}\nmodule.exports = _regeneratorAsync, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/regeneratorAsync.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js ***!
+  \********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{var regenerator = __webpack_require__(/*! ./regenerator.js */ \"./node_modules/@babel/runtime/helpers/regenerator.js\");\nvar regeneratorAsyncIterator = __webpack_require__(/*! ./regeneratorAsyncIterator.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js\");\nfunction _regeneratorAsyncGen(r, e, t, o, n) {\n  return new regeneratorAsyncIterator(regenerator().w(r, e, t, o), n || Promise);\n}\nmodule.exports = _regeneratorAsyncGen, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js ***!
+  \*************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{var OverloadYield = __webpack_require__(/*! ./OverloadYield.js */ \"./node_modules/@babel/runtime/helpers/OverloadYield.js\");\nvar regeneratorDefine = __webpack_require__(/*! ./regeneratorDefine.js */ \"./node_modules/@babel/runtime/helpers/regeneratorDefine.js\");\nfunction AsyncIterator(t, e) {\n  function n(r, o, i, f) {\n    try {\n      var c = t[r](o),\n        u = c.value;\n      return u instanceof OverloadYield ? e.resolve(u.v).then(function (t) {\n        n(\"next\", t, i, f);\n      }, function (t) {\n        n(\"throw\", t, i, f);\n      }) : e.resolve(u).then(function (t) {\n        c.value = t, i(c);\n      }, function (t) {\n        return n(\"throw\", t, i, f);\n      });\n    } catch (t) {\n      f(t);\n    }\n  }\n  var r;\n  this.next || (regeneratorDefine(AsyncIterator.prototype), regeneratorDefine(AsyncIterator.prototype, \"function\" == typeof Symbol && Symbol.asyncIterator || \"@asyncIterator\", function () {\n    return this;\n  })), regeneratorDefine(this, \"_invoke\", function (t, o, i) {\n    function f() {\n      return new e(function (e, r) {\n        n(t, i, e, r);\n      });\n    }\n    return r = r ? r.then(f, f) : f();\n  }, !0);\n}\nmodule.exports = AsyncIterator, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorDefine.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorDefine.js ***!
+  \******************************************************************/
+/***/ ((module) => {
+
+eval("{function _regeneratorDefine(e, r, n, t) {\n  var i = Object.defineProperty;\n  try {\n    i({}, \"\", {});\n  } catch (e) {\n    i = 0;\n  }\n  module.exports = _regeneratorDefine = function regeneratorDefine(e, r, n, t) {\n    function o(r, n) {\n      _regeneratorDefine(e, r, function (e) {\n        return this._invoke(r, n, e);\n      });\n    }\n    r ? i ? i(e, r, {\n      value: n,\n      enumerable: !t,\n      configurable: !t,\n      writable: !t\n    }) : e[r] = n : (o(\"next\", 0), o(\"throw\", 1), o(\"return\", 2));\n  }, module.exports.__esModule = true, module.exports[\"default\"] = module.exports, _regeneratorDefine(e, r, n, t);\n}\nmodule.exports = _regeneratorDefine, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/regeneratorDefine.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorKeys.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorKeys.js ***!
+  \****************************************************************/
+/***/ ((module) => {
+
+eval("{function _regeneratorKeys(e) {\n  var n = Object(e),\n    r = [];\n  for (var t in n) r.unshift(t);\n  return function e() {\n    for (; r.length;) if ((t = r.pop()) in n) return e.value = t, e.done = !1, e;\n    return e.done = !0, e;\n  };\n}\nmodule.exports = _regeneratorKeys, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/regeneratorKeys.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorRuntime.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
+  \*******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{var OverloadYield = __webpack_require__(/*! ./OverloadYield.js */ \"./node_modules/@babel/runtime/helpers/OverloadYield.js\");\nvar regenerator = __webpack_require__(/*! ./regenerator.js */ \"./node_modules/@babel/runtime/helpers/regenerator.js\");\nvar regeneratorAsync = __webpack_require__(/*! ./regeneratorAsync.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsync.js\");\nvar regeneratorAsyncGen = __webpack_require__(/*! ./regeneratorAsyncGen.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js\");\nvar regeneratorAsyncIterator = __webpack_require__(/*! ./regeneratorAsyncIterator.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js\");\nvar regeneratorKeys = __webpack_require__(/*! ./regeneratorKeys.js */ \"./node_modules/@babel/runtime/helpers/regeneratorKeys.js\");\nvar regeneratorValues = __webpack_require__(/*! ./regeneratorValues.js */ \"./node_modules/@babel/runtime/helpers/regeneratorValues.js\");\nfunction _regeneratorRuntime() {\n  \"use strict\";\n\n  var r = regenerator(),\n    e = r.m(_regeneratorRuntime),\n    t = (Object.getPrototypeOf ? Object.getPrototypeOf(e) : e.__proto__).constructor;\n  function n(r) {\n    var e = \"function\" == typeof r && r.constructor;\n    return !!e && (e === t || \"GeneratorFunction\" === (e.displayName || e.name));\n  }\n  var o = {\n    \"throw\": 1,\n    \"return\": 2,\n    \"break\": 3,\n    \"continue\": 3\n  };\n  function a(r) {\n    var e, t;\n    return function (n) {\n      e || (e = {\n        stop: function stop() {\n          return t(n.a, 2);\n        },\n        \"catch\": function _catch() {\n          return n.v;\n        },\n        abrupt: function abrupt(r, e) {\n          return t(n.a, o[r], e);\n        },\n        delegateYield: function delegateYield(r, o, a) {\n          return e.resultName = o, t(n.d, regeneratorValues(r), a);\n        },\n        finish: function finish(r) {\n          return t(n.f, r);\n        }\n      }, t = function t(r, _t, o) {\n        n.p = e.prev, n.n = e.next;\n        try {\n          return r(_t, o);\n        } finally {\n          e.next = n.n;\n        }\n      }), e.resultName && (e[e.resultName] = n.v, e.resultName = void 0), e.sent = n.v, e.next = n.n;\n      try {\n        return r.call(this, e);\n      } finally {\n        n.p = e.prev, n.n = e.next;\n      }\n    };\n  }\n  return (module.exports = _regeneratorRuntime = function _regeneratorRuntime() {\n    return {\n      wrap: function wrap(e, t, n, o) {\n        return r.w(a(e), t, n, o && o.reverse());\n      },\n      isGeneratorFunction: n,\n      mark: r.m,\n      awrap: function awrap(r, e) {\n        return new OverloadYield(r, e);\n      },\n      AsyncIterator: regeneratorAsyncIterator,\n      async: function async(r, e, t, o, u) {\n        return (n(e) ? regeneratorAsyncGen : regeneratorAsync)(a(r), e, t, o, u);\n      },\n      keys: regeneratorKeys,\n      values: regeneratorValues\n    };\n  }, module.exports.__esModule = true, module.exports[\"default\"] = module.exports)();\n}\nmodule.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/regeneratorRuntime.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorValues.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorValues.js ***!
+  \******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{var _typeof = (__webpack_require__(/*! ./typeof.js */ \"./node_modules/@babel/runtime/helpers/typeof.js\")[\"default\"]);\nfunction _regeneratorValues(e) {\n  if (null != e) {\n    var t = e[\"function\" == typeof Symbol && Symbol.iterator || \"@@iterator\"],\n      r = 0;\n    if (t) return t.call(e);\n    if (\"function\" == typeof e.next) return e;\n    if (!isNaN(e.length)) return {\n      next: function next() {\n        return e && r >= e.length && (e = void 0), {\n          value: e && e[r++],\n          done: !e\n        };\n      }\n    };\n  }\n  throw new TypeError(_typeof(e) + \" is not iterable\");\n}\nmodule.exports = _regeneratorValues, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/regeneratorValues.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
+  \*******************************************************/
+/***/ ((module) => {
+
+eval("{function _typeof(o) {\n  \"@babel/helpers - typeof\";\n\n  return module.exports = _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) {\n    return typeof o;\n  } : function (o) {\n    return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o;\n  }, module.exports.__esModule = true, module.exports[\"default\"] = module.exports, _typeof(o);\n}\nmodule.exports = _typeof, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/helpers/typeof.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{// TODO(Babel 8): Remove this file.\n\nvar runtime = __webpack_require__(/*! ../helpers/regeneratorRuntime */ \"./node_modules/@babel/runtime/helpers/regeneratorRuntime.js\")();\nmodule.exports = runtime;\n\n// Copied from https://github.com/facebook/regenerator/blob/main/packages/runtime/runtime.js#L736=\ntry {\n  regeneratorRuntime = runtime;\n} catch (accidentalStrictMode) {\n  if (typeof globalThis === \"object\") {\n    globalThis.regeneratorRuntime = runtime;\n  } else {\n    Function(\"r\", \"regeneratorRuntime = r\")(runtime);\n  }\n}\n\n\n//# sourceURL=webpack://codigo/./node_modules/@babel/runtime/regenerator/index.js?\n}");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _templates_Template_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./templates/Template.js */ \"./src/templates/Template.js\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/main.css */ \"./src/styles/main.css\");\n/* harmony import */ var _styles_vars_styl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/vars.styl */ \"./src/styles/vars.styl\");\n\n\n\n/**\n * N_8.2: Ahora se manejara la ruta de los estilos CSS desde el archivo index.js dentro de la carpeta src.\n * Se agrega la ruta al archivo CSS completa.\n * \n * N_8.10: Se importa el nuevo archivo de tipo stylus.\n */\n\n\n\n// console.log('hola');\n\n(function () {\n  var _App = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {\n    var main;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function (_context) {\n      while (1) switch (_context.prev = _context.next) {\n        case 0:\n          main =  false || document.getElementById('main');\n          _context.next = 1;\n          return (0,_templates_Template_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n        case 1:\n          main.innerHTML = _context.sent;\n        case 2:\n        case \"end\":\n          return _context.stop();\n      }\n    }, _callee);\n  }));\n  function App() {\n    return _App.apply(this, arguments);\n  }\n  return App;\n})()();\n\n//# sourceURL=webpack://codigo/./src/index.js?\n}");
+
+/***/ }),
+
+/***/ "./src/styles/main.css":
+/*!*****************************!*\
+  !*** ./src/styles/main.css ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://codigo/./src/styles/main.css?\n}");
+
+/***/ }),
+
+/***/ "./src/styles/vars.styl":
+/*!******************************!*\
+  !*** ./src/styles/vars.styl ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://codigo/./src/styles/vars.styl?\n}");
+
+/***/ }),
+
+/***/ "./src/templates/Template.js":
+/*!***********************************!*\
+  !*** ./src/templates/Template.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utils_getData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/getData.js */ \"./src/utils/getData.js\");\n\n\n\nvar Template = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {\n    var data, view;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function (_context) {\n      while (1) switch (_context.prev = _context.next) {\n        case 0:\n          _context.next = 1;\n          return (0,_utils_getData_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n        case 1:\n          data = _context.sent;\n          view = \"\\n    <div class=\\\"About\\\">\\n      <div class=\\\"card\\\">\\n        <div class=\\\"card_details\\\">\\n          <div class=\\\"card_photo center circle\\\">\\n            <img src=\\\"\".concat(data.picture.large, \"\\\" alt=\\\"\").concat(data.name.first, \"\\\">\\n            <svg viewBox=\\\"0 0 100 100\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" style=\\\"enable-background:new -580 439 577.9 194;\\\"\\n              xml:space=\\\"preserve\\\">\\n              <circle cx=\\\"50\\\" cy=\\\"50\\\" r=\\\"40\\\" />\\n            </svg>\\n          </div>\\n          <p class=\\\"card_title\\\">Hi, My name is</p>\\n          <p class=\\\"card_value\\\">\").concat(data.name.first, \" \").concat(data.name.last, \"</p>\\n        </div>\\n        <div class=\\\"card_userdata\\\">\\n          <ul>\\n            <li>\").concat(data.email, \"</li>\\n            <li>\").concat(data.location.country, \"</li>\\n          </ul>\\n        </div>\\n        <div class=\\\"card_social\\\">\\n          <a href=\\\"https://twitter.com/gndx\\\">\\n            <img src=\\\"../src/assets/images/twitter.png\\\" />\\n          </a>\\n          <a href=\\\"https://github.com/gndx\\\">\\n            <img src=\\\"../src/assets/images/github.png\\\" />\\n          </a>\\n          <a href=\\\"https://instagram.com/gndx\\\">\\n            <img src=\\\"../src/assets/images/instagram.png\\\" />\\n          </a>\\n        </div>\\n      </div>\\n    </div>\\n  \");\n          return _context.abrupt(\"return\", view);\n        case 2:\n        case \"end\":\n          return _context.stop();\n      }\n    }, _callee);\n  }));\n  return function Template() {\n    return _ref.apply(this, arguments);\n  };\n}();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Template);\n\n//# sourceURL=webpack://codigo/./src/templates/Template.js?\n}");
+
+/***/ }),
+
+/***/ "./src/utils/getData.js":
+/*!******************************!*\
+  !*** ./src/utils/getData.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar API = 'https://randomuser.me/api/';\nvar getData = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee(id) {\n    var apiURl, response, data, _t;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function (_context) {\n      while (1) switch (_context.prev = _context.next) {\n        case 0:\n          apiURl = id ? \"\".concat(API).concat(id) : API;\n          _context.prev = 1;\n          _context.next = 2;\n          return fetch(apiURl);\n        case 2:\n          response = _context.sent;\n          _context.next = 3;\n          return response.json();\n        case 3:\n          data = _context.sent;\n          return _context.abrupt(\"return\", data.results[0]);\n        case 4:\n          _context.prev = 4;\n          _t = _context[\"catch\"](1);\n          console.log('Fetch Error', _t);\n          ;\n        case 5:\n        case \"end\":\n          return _context.stop();\n      }\n    }, _callee, null, [[1, 4]]);\n  }));\n  return function getData(_x) {\n    return _ref.apply(this, arguments);\n  };\n}();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://codigo/./src/utils/getData.js?\n}");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	
+/******/ })()
+;
