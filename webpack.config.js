@@ -1,10 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-/**
- * N_8.3: Se crea una constante para agregar el plugin instalado mini-css-extract-plugin. 
- * Este plugin permitirá añadir la configuración para que identifique los elementos.
- */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+/**
+ * N_9.1: Se instala un nuevo plugin llamado copy-webpack-plugin como dependencia de desarrollo para copiar uno o mas archivos a 
+ *      una nueva ruta.
+ * Se inicializa el nuevo plugin como una constante.
+ */
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -16,9 +18,6 @@ module.exports = {
         extensions: ['.js']
     },
     module: {
-        /**
-         * N_8.4: Se creara una nueva regla para reconocer los archivos CSS.
-         */
         rules: [
             {
                 test: /\.m?js$/, // Expresión regular para Archivos .mjs o .js
@@ -27,22 +26,6 @@ module.exports = {
                     loader: 'babel-loader'
                 }
             },
-            /**
-             * N_8.5: Se agrega test seguido de la expresion regular para reconocer archivos con extension css.
-             * Se agrega use (puede ser utilizado como un objeto o un arreglo), y dentro del arreglo, se instancia el plugin seguido 
-             *      de la función loader, y luego una coma "," para pasarle los louder a utilizar: 
-             *      En este caso sera el css-loader
-             * 
-             * N_8.8: Se instala el plugin stylus como dependencia de desarrollo, y se puede agregar dentro de la misma regla de 
-             *      archivos .css ya creada.
-             * Los archivos del pre procesador stylus tienen la extension .styl y se pueden agregar en la misma regla. Luego solo es 
-             *      necesario agregar el loader correspondiente.
-             * Se agrega un separador "O" "|" y ambos extensiones de archivo.
-             * IMPORTANTE: NO agregar espacios en blanco, ya que se producen errores al compilar con webpack.
-             * 
-             * N_8.9: Dentro de la carpeta src/styles se crea un nuevo archivo vars.styl 
-             * Se crea una variable y se le asigna un color de prueba, luego se asigna al body.
-             */
             {
                 test: /\.css|.styl$/i,
                 use: [MiniCssExtractPlugin.loader,
@@ -59,14 +42,31 @@ module.exports = {
             template: './public/index.html',
             filename: './index.html',
         }),
-        /**
-         * N_8.6: Dentro del plugins, se crea una nueva instancia del plugin mini-css.
-         * No es necesario pasarle ningún valor, solo se necesitar iniciar.
-         * 
-         * N_8.7: Con la configuración lista, se ejecuta el comando:
-         *      npm run dev
-         * Dentro de la carpeta "dist" se creara un nuevo archivo llamado main.css 
-         */
         new MiniCssExtractPlugin(),
+        /**
+         * N_9.2: Se crea una nueva instancia del plugin.
+         * Se le pasa una configuración partiendo por un modelo o patters, el cual sera un arreglo, que dentro tendrá un objeto.
+         * El objeto tendrá dos elementos, desde donde y hacia donde se moverán los archivos.
+         *      from -> resolverá la ruta buscando en el directorio la carpeta src y luego assets/images.
+         *      to -> la ruta donde se van a mover los archivos. No es obligatorio que la ruta se llame igual, se pueden utilizar 
+         *            otros nombres.
+         * 
+         * N_9.3: El siguiente paso sera editar la plantilla en la ruta src/templates/Templates.js.
+         * Como ahora las imágenes se agregaran en una nueva ruta en la carpeta dist, se debe editar el template y quitar 
+         *      src="../src/" de la ruta de la imagen.
+         * 
+         * N_9.4: Una vez hecha la configuración, ejecutar el comando:
+         * npm run dev
+         * Ahora dentro de la carpeta "dist", aparecerá la carpeta "assets" y dentro "images" con las 3 imágenes de iconos que se 
+         *      le pasaron
+         */
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, "src", "assets/images"),
+                    to: "assets/images"
+                }
+            ]
+        })
     ]
 }

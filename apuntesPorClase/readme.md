@@ -9,6 +9,7 @@
 * [Clase 06 - Integración de Babel y Webpack para compatibilidad JavaScript](#id6)
 * [Clase 07 - Configuración de HTML-webpack-plugin en Webpack](#id7)
 * [Clase 08 - Configuración de Webpack para CSS y Preprocesadores](#id8)
+* [Clase 09 - Uso de Copy Webpack Plugin para Mover Archivos en Proyectos Node.js](#id9)
 
 ---
 
@@ -409,3 +410,54 @@ npm run dev
 Esto debería compilar los archivos CSS, generando archivos como main.js y main.css, ubicados en tu carpeta **dist**.
 
 ---
+
+## Uso de Copy Webpack Plugin para Mover Archivos en Proyectos Node.js [9/28]<a name="id9"></a>
+Trabajar con proyectos a menudo exige mover archivos de una ubicación a otra dentro de la estructura del proyecto.
+El plugin Copy Webpack Plugin en Webpack resuelve esta necesidad al facilitar la copia de archivos de un directorio de origen a uno de destino automáticamente.
+
+### ¿Cómo instalar y configurar el plugin?
+Iniciar la instalación del plugin es sencillo:
+
+1. Instalación del plugin: Abrir la terminal y ejecutar el comando para instalarlo como una dependencia de desarrollo:
+````
+npm install copy-webpack-plugin --save-dev
+````
+
+2. Integración en Webpack: Agregar soporte para el plugin en la configuración de Webpack. Para esto, modifica el archivo webpack.config.js:
+````javascript
+const CopyPlugin = require('copy-webpack-plugin');
+module.exports = {
+  // otras configuraciones de webpack
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/assets/images', to: 'dist/assets/images' },
+      ],
+    }),
+  ],
+};
+````
+
+Esta configuración permite copiar todos los archivos desde la carpeta *src/assets/images* a *dist/assets/images*. Esto es especialmente útil cuando se necesita trasladar múltiples archivos sin esfuerzo manual.
+
+### ¿Cómo ajustar el template del proyecto?
+Dentro del template HTML se debe cambiar las rutas de las imágenes para que apunten al nuevo directorio de destino:
+````html
+<img src="/assets/images/twitter.png" alt="Twitter">
+<img src="/assets/images/github.png" alt="GitHub">
+<img src="/assets/images/instagram.png" alt="Instagram">
+````
+
+Se debe Modificar cualquier instancia previa que apunte al directorio *src*. Con esto, el proyecto queda estructurado de forma más adecuada, leyendo las imágenes desde su nueva ubicación.
+
+### ¿Qué verificar después de la implementación?
+Después de ejecutar el comando de desarrollo para ver los cambios, es crucial verificar que los elementos se han movido correctamente:
+
+1. Ejecutar el comando **npm run dev** para construir nuevamente tu proyecto.
+2. Revisar el directorio **dist** para confirmar que las imágenes se hayan copiado adecuadamente.
+3. Levantar el proyecto con live server y usar inspectores de elementos en el navegador para asegurarse de que las rutas de las imágenes en el HTML dirijan al directorio correcto.
+
+#### Recomendaciones y consejos adicionales
+* El Copy Webpack Plugin es invaluable no solo para transferir imágenes, sino también otros recursos como fuentes o archivos específicos que no necesitas compilar.
+* Asegurarse de mantener un estándar en el proyecto utilizando siempre las mismas comillas para evitar errores de formato.
+* Practicar la actualización de rutas y configuración de archivos en proyectos de desarrollo reales para familiarizarse mejor con el proceso.
