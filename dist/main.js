@@ -130,6 +130,39 @@ eval("{// TODO(Babel 8): Remove this file.\n\nvar runtime = __webpack_require__(
 
 /***/ }),
 
+/***/ "./src/assets/images/github.png":
+/*!**************************************!*\
+  !*** ./src/assets/images/github.png ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("{module.exports = __webpack_require__.p + \"9c4faee7513f87e9b3b3.png\";\n\n//# sourceURL=webpack://codigo/./src/assets/images/github.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/images/instagram.png":
+/*!*****************************************!*\
+  !*** ./src/assets/images/instagram.png ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("{module.exports = __webpack_require__.p + \"8932205d8701217166c9.png\";\n\n//# sourceURL=webpack://codigo/./src/assets/images/instagram.png?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/images/twitter.png":
+/*!***************************************!*\
+  !*** ./src/assets/images/twitter.png ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("{module.exports = __webpack_require__.p + \"a4a49dfe20c4a1a2c681.png\";\n\n//# sourceURL=webpack://codigo/./src/assets/images/twitter.png?\n}");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -170,7 +203,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-ext
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utils_getData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/getData.js */ \"./src/utils/getData.js\");\n\n\n\nvar Template = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {\n    var data, view;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function (_context) {\n      while (1) switch (_context.prev = _context.next) {\n        case 0:\n          _context.next = 1;\n          return (0,_utils_getData_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n        case 1:\n          data = _context.sent;\n          view = \"\\n    <div class=\\\"About\\\">\\n      <div class=\\\"card\\\">\\n        <div class=\\\"card_details\\\">\\n          <div class=\\\"card_photo center circle\\\">\\n            <img src=\\\"\".concat(data.picture.large, \"\\\" alt=\\\"\").concat(data.name.first, \"\\\">\\n            <svg viewBox=\\\"0 0 100 100\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" style=\\\"enable-background:new -580 439 577.9 194;\\\"\\n              xml:space=\\\"preserve\\\">\\n              <circle cx=\\\"50\\\" cy=\\\"50\\\" r=\\\"40\\\" />\\n            </svg>\\n          </div>\\n          <p class=\\\"card_title\\\">Hi, My name is</p>\\n          <p class=\\\"card_value\\\">\").concat(data.name.first, \" \").concat(data.name.last, \"</p>\\n        </div>\\n        <div class=\\\"card_userdata\\\">\\n          <ul>\\n            <li>\").concat(data.email, \"</li>\\n            <li>\").concat(data.location.country, \"</li>\\n          </ul>\\n        </div>\\n        <div class=\\\"card_social\\\">\\n          <a href=\\\"https://twitter.com/\\\">\\n            <img src=\\\"assets/images/twitter.png\\\" />\\n          </a>\\n          <a href=\\\"https://github.com/\\\">\\n            <img src=\\\"assets/images/github.png\\\" />\\n          </a>\\n          <a href=\\\"https://instagram.com/\\\">\\n            <img src=\\\"assets/images/instagram.png\\\" />\\n          </a>\\n        </div>\\n      </div>\\n    </div>\\n  \");\n          return _context.abrupt(\"return\", view);\n        case 2:\n        case \"end\":\n          return _context.stop();\n      }\n    }, _callee);\n  }));\n  return function Template() {\n    return _ref.apply(this, arguments);\n  };\n}();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Template);\n\n//# sourceURL=webpack://codigo/./src/templates/Template.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utils_getData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/getData.js */ \"./src/utils/getData.js\");\n/* harmony import */ var _assets_images_github_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/images/github.png */ \"./src/assets/images/github.png\");\n/* harmony import */ var _assets_images_instagram_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/images/instagram.png */ \"./src/assets/images/instagram.png\");\n/* harmony import */ var _assets_images_twitter_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/images/twitter.png */ \"./src/assets/images/twitter.png\");\n\n\n\n/**\n * N_10.2: Dentro del template, se agrega una nueva ruta para realizar un import por cada imagen que se quiere agregar en la plantilla.\n * \n * N_10.3: Dentro del div card-social, ahora se puede reemplazar la ruta de las imágenes como si se tratara de una variable utilizando ${}.\n */\n\n\n\nvar Template = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {\n    var data, view;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function (_context) {\n      while (1) switch (_context.prev = _context.next) {\n        case 0:\n          _context.next = 1;\n          return (0,_utils_getData_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n        case 1:\n          data = _context.sent;\n          view = \"\\n    <div class=\\\"About\\\">\\n      <div class=\\\"card\\\">\\n        <div class=\\\"card_details\\\">\\n          <div class=\\\"card_photo center circle\\\">\\n            <img src=\\\"\".concat(data.picture.large, \"\\\" alt=\\\"\").concat(data.name.first, \"\\\">\\n            <svg viewBox=\\\"0 0 100 100\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" style=\\\"enable-background:new -580 439 577.9 194;\\\"\\n              xml:space=\\\"preserve\\\">\\n              <circle cx=\\\"50\\\" cy=\\\"50\\\" r=\\\"40\\\" />\\n            </svg>\\n          </div>\\n          <p class=\\\"card_title\\\">Hi, My name is</p>\\n          <p class=\\\"card_value\\\">\").concat(data.name.first, \" \").concat(data.name.last, \"</p>\\n        </div>\\n        <div class=\\\"card_userdata\\\">\\n          <ul>\\n            <li>\").concat(data.email, \"</li>\\n            <li>\").concat(data.location.country, \"</li>\\n          </ul>\\n        </div>\\n        <div class=\\\"card_social\\\">\\n          <a href=\\\"https://twitter.com/\\\">\\n            <img src=\\\"\").concat(_assets_images_twitter_png__WEBPACK_IMPORTED_MODULE_5__, \"\\\" />\\n          </a>\\n          <a href=\\\"https://github.com/\\\">\\n            <img src=\\\"\").concat(_assets_images_github_png__WEBPACK_IMPORTED_MODULE_3__, \"\\\" />\\n          </a>\\n          <a href=\\\"https://instagram.com/\\\">\\n            <img src=\\\"\").concat(_assets_images_instagram_png__WEBPACK_IMPORTED_MODULE_4__, \"\\\" />\\n          </a>\\n        </div>\\n      </div>\\n    </div>\\n  \");\n          return _context.abrupt(\"return\", view);\n        case 2:\n        case \"end\":\n          return _context.stop();\n      }\n    }, _callee);\n  }));\n  return function Template() {\n    return _ref.apply(this, arguments);\n  };\n}();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Template);\n\n//# sourceURL=webpack://codigo/./src/templates/Template.js?\n}");
 
 /***/ }),
 
@@ -236,6 +269,18 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -250,6 +295,29 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

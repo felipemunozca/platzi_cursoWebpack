@@ -1,4 +1,15 @@
 import getData from '../utils/getData.js';
+/**
+ * N_10.2: Dentro del template, se agrega una nueva ruta para realizar un import por cada imagen que se quiere agregar en la plantilla.
+ * 
+ * N_10.3: Dentro del div card-social, ahora se puede reemplazar la ruta de las imágenes como si se tratara de una variable utilizando ${}.
+ * 
+ * N_10.4: Se revisa si el código resulto ejecutando el comando: npm run dev
+ * Dentro de la carpeta dist aparecerán tres nuevos archivos de imágenes que serán los iconos de la aplicación. De momento no tienen nombre sino que un hash para diferenciar cada uno de los nombres.
+ */
+import github from '../assets/images/github.png';
+import instagram from '../assets/images/instagram.png';
+import twitter from '../assets/images/twitter.png';
 
 const Template = async () => {
   const data = await getData();
@@ -24,13 +35,13 @@ const Template = async () => {
         </div>
         <div class="card_social">
           <a href="https://twitter.com/">
-            <img src="assets/images/twitter.png" />
+            <img src="${twitter}" />
           </a>
           <a href="https://github.com/">
-            <img src="assets/images/github.png" />
+            <img src="${github}" />
           </a>
           <a href="https://instagram.com/">
-            <img src="assets/images/instagram.png" />
+            <img src="${instagram}" />
           </a>
         </div>
       </div>

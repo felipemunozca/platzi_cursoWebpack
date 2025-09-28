@@ -10,6 +10,7 @@
 * [Clase 07 - Configuración de HTML-webpack-plugin en Webpack](#id7)
 * [Clase 08 - Configuración de Webpack para CSS y Preprocesadores](#id8)
 * [Clase 09 - Uso de Copy Webpack Plugin para Mover Archivos en Proyectos Node.js](#id9)
+* [Clase 10 - Importación de Imágenes con Webpack Asset Module](#id10)
 
 ---
 
@@ -461,3 +462,56 @@ Después de ejecutar el comando de desarrollo para ver los cambios, es crucial v
 * El Copy Webpack Plugin es invaluable no solo para transferir imágenes, sino también otros recursos como fuentes o archivos específicos que no necesitas compilar.
 * Asegurarse de mantener un estándar en el proyecto utilizando siempre las mismas comillas para evitar errores de formato.
 * Practicar la actualización de rutas y configuración de archivos en proyectos de desarrollo reales para familiarizarse mejor con el proceso.
+
+---
+
+## Importación de Imágenes con Webpack Asset Module [10/28]<a name="id10"></a>
+Importar imágenes correctamente en un proyecto es crucial para una óptima gestión de recursos.
+
+### ¿Qué es el asset module de Webpack?
+Webpack ofrece la funcionalidad de **asset module**, una forma eficiente de manejar archivos estáticos sin necesidad de loaders adicionales. Al integrarse directamente en la configuración de Webpack, asset module permite importar imágenes como recursos y optimizarlas automáticamente.
+
+### Implementación de asset module
+Para comenzar, es necesario establecer unas reglas en el archivo de configuración de Webpack:
+````javascript
+module.exports = {
+  module: {
+    rules: [
+      // Regla para manejo de CSS ya existente
+      {
+        test: /\.png$/,
+        type: 'asset/resource'
+      }
+    ]
+  }
+}
+````
+
+Esta regla indica a Webpack que trate los archivos .png como recursos, permitiendo su importación directa en el código JavaScript.
+
+### ¿Cómo importar imágenes en el proyecto?
+Con la configuración de Webpack lista, el siguiente paso es importar las imágenes como variables:
+````javascript
+import github from './assets/images/github.png';
+import twitter from './assets/images/twitter.png';
+import instagram from './assets/images/instagram.png';
+````
+
+Al hacer esto, cada imagen se transforma en una variable que puede emplearse en plantillas o componentes, sustituyendo vínculos directos a ficheros.
+
+### ¿Cómo modificar plantillas para usar variables de imágenes?
+Modificar plantillas para aprovechar las variables de imágenes es sencillo. Se sustituye la ruta directa por la referencia a la variable:
+````javascript
+<img src="${twitter}" alt="Twitter">
+<img src="${github}" alt="GitHub">
+<img src="${instagram}" alt="Instagram">
+````
+
+Con estas modificaciones, el código se vuelve más legible y se facilita el mantenimiento. Las imágenes se cargan y optimizan automáticamente, ofreciendo mejoras significativas en rendimiento.
+
+### ¿Qué ventajas ofrece este método?
+* Optimización automática: Las imágenes se optimizan al generar un hash único, mejorando su uso en producción.
+* Facilidad de mantenimiento: El código es más limpio y entendible al usar variables, lo cual ayuda en la gestión de grandes proyectos.
+* Integración sencilla: Con apenas unas líneas en la configuración, es posible habilitar esta funcionalidad para diferentes tipos de archivos.
+
+---
