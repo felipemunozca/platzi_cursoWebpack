@@ -11,6 +11,7 @@
 * [Clase 08 - Configuración de Webpack para CSS y Preprocesadores](#id8)
 * [Clase 09 - Uso de Copy Webpack Plugin para Mover Archivos en Proyectos Node.js](#id9)
 * [Clase 10 - Importación de Imágenes con Webpack Asset Module](#id10)
+* [Clase 11 - Optimización de Fuentes Locales con Webpack](#id11)
 
 ---
 
@@ -513,5 +514,65 @@ Con estas modificaciones, el código se vuelve más legible y se facilita el man
 * Optimización automática: Las imágenes se optimizan al generar un hash único, mejorando su uso en producción.
 * Facilidad de mantenimiento: El código es más limpio y entendible al usar variables, lo cual ayuda en la gestión de grandes proyectos.
 * Integración sencilla: Con apenas unas líneas en la configuración, es posible habilitar esta funcionalidad para diferentes tipos de archivos.
+
+---
+
+## Optimización de Fuentes Locales con Webpack [11/28]<a name="id11"></a>
+Trabajar con fuentes externas, como las de Google Fonts, es común que los proyectos se vuelvan más pesados por los llamados que se realizan a estas fuentes. Una excelente práctica de optimización consiste en integrar estas fuentes de manera local dentro del proyecto. Esto garantiza un rendimiento mejorado y una carga más rápida.
+
+### ¿Cómo identificar y descargar la fuente?
+En muchos proyectos, las fuentes se gestionan desde la hoja de estilos principal. Por ejemplo, si estás importando la fuente "Ubuntu" de Google Fonts en el archivo CSS, es momento de descargarla para incorporarla localmente. Si bien Google Fonts permite la descarga de fuentes, es necesario obtenerlas en formato optimizado para la web, como **.woff** o **.woff2**.
+
+### ¿Cómo integrar las fuentes localmente con font-face?
+Una vez descargada la fuente, es momento de integrarla al proyecto. Se crea una carpeta *fonts* dentro del directorio *assets* y ahí se colocan las fuentes descargadas. Luego, en el archivo CSS, se utiliza la regla **@font-face** para definir la fuente localmente.
+````css
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../assets/fonts/ubuntu-regular.woff2') format('woff2'),
+         url('../assets/fonts/ubuntu-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+````
+
+Con esta configuración, se le indica al navegador que utilice las fuentes locales en lugar de recurrir a servidores externos. Esto no solo mejora la velocidad de carga, sino también la consistencia del proyecto.
+
+### ¿Cómo configurar webpack para copiar fuentes?
+Una vez que las fuentes están integradas localmente, el siguiente paso es asegurarse de que se incluyan correctamente en la carpeta de *dist* al momento de compilar el proyecto con webpack.
+
+1. Primero, instalar los loaders (plugins) necesarios:
+````
+npm install url-loader file-loader --save-dev
+````
+
+2. Luego, añadir la siguiente configuración a el archivo webpack:
+````javascript
+module.exports = {
+  module: {
+    rules: [
+      // Otras reglas
+      {
+        test: /\.(woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            mimetype: 'application/font-woff',
+            name: '[name].[ext]',
+            outputPath: 'assets/fonts/',
+            publicPath: 'assets/fonts/',
+            esModule: false
+          }
+        }
+      }
+    ]
+  }
+};
+````
+
+Con estas reglas, se le indica a webpack cómo manejar y procesar los archivos de fuentes, asegurando que se copien a la ubicación correcta en la carpeta de distribución.
+
+### ¿Cómo verificar la integración exitosa?
+Verificar que las fuentes se carguen localmente inspeccionando el elemento desde el navegador y asegurando que el font-family aplicado corresponda al que se ha definido. También es recomendable verificar visualmente que la representación de las fuentes sea la esperada por sus características distintivas, como las formas de las letras.
 
 ---

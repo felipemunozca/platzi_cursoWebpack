@@ -1,4 +1,21 @@
-@import "https://fonts.googleapis.com/css?family=Ubuntu:300,400,500";
+/* @import "https://fonts.googleapis.com/css?family=Ubuntu:300,400,500"; */
+
+/*
+	N_11.1: Se descarga la fuente "ubuntu" desde google fonts, de esta forma se utilizaran como archivos locales en vez
+		de un enlace a la api web.
+	Se crea la estructura para utilizar la fuente.
+	Lo primero es definir el nombre de la font-family.
+	Se agrega la ruta local donde están las fuentes y se debe agregar dos veces, una por cada formato woff2 y woff.
+	Se agrega el peso que tendrá la fuente.
+	Se agrega el tipo de estilo.
+*/
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../assets/fonts/ubuntu-regular.woff2') format('woff2'),
+		url('../assets/fonts/ubuntu-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
 
 html {
 	font-family: sans-serif;
